@@ -1,0 +1,54 @@
+import { useState } from 'react'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import BackgroundImage from "./assets/andrei-r-popescu-evDCeV-adM4-unsplash.jpg";
+import {Link} from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+
+function App () {
+
+  return (
+    <div style={{
+      minHeight: "100vh", 
+      width: "100vw",
+      position:"relative",
+      backgroundColor:"#DAD4B5"
+    }}>
+      <Navbar data-bs-theme="dark" fixed="top" style={{backgroundColor:"#800000"}}>
+        <Container>
+          <Navbar.Brand as={Link} to="/">Nica Web</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/profile">Profile</Nav.Link>
+            <Nav.Link href="/home"></Nav.Link>
+            <Nav.Link href="/backgrounds">Backgrounds</Nav.Link>
+            <Nav.Link href="/photos">Photos</Nav.Link>
+            <Nav.Link href="/about me">About Me</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+
+      <div className="mt-5" style={{fontFamily:"Georgia, seriff", 
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              paddingTop:"60px",
+              display: "flex",
+            flexDirection:"column",}}>
+      
+      <Card style={{height:"10rem",width:"100vw",justifyContent: "center", alignItems: "center", backgroundColor:'#982B1C',marginTop:"70px"}}>
+      <Card.Body><h1 style={{fontSize:"3rem",color:"white",fontWeight:"bold"}}>Welcome to my WebPage</h1></Card.Body>
+        </Card>
+        <div style={{paddingTop:"90px"}}>
+        <Card style={{height:"10rem",width:"100vw",justifyContent: "center", alignItems: "center", backgroundColor:'#982B1C'}}>
+      <Card.Body style={{fontSize:"3rem",color:"white"}}>Dominnica Narvato</Card.Body>
+        </Card>
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
+export default App
